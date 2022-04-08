@@ -125,7 +125,8 @@
                 { v: "true", t: "is true" },
                 { v: "false", t: "is false" },
                 { v: "null", t: "is null" },
-                { v: "nnull", t: "is not null" }
+                { v: "nnull", t: "is not null" },
+                { v: "hysteresis", t: "hysteresis"}
             ];
 
             var andLabel = "and";
@@ -149,6 +150,7 @@
                 var caseLabel = rule.find(".node-input-rule-case-label");
 
                 switch (type) {
+                    case "hysteresis":
                     case "btwn": {
                         btwnField1.typedInput("width", Math.trunc(newWidth / 2) - (btwnLabel.width() / 2) - 10)
                         btwnField2.typedInput("width", Math.trunc(newWidth / 2) - (btwnLabel.width() / 2) - 10)
@@ -198,6 +200,7 @@
                         resizeRule(container);
                         var selected = selectField.val() || "eq";
                         switch (selected) {
+                            case "hysteresis":
                             case "btwn": {
                                 valueField.typedInput('hide');
                                 btwnValueField.typedInput('show');
@@ -260,7 +263,7 @@
                     propertyField.typedInput('value', rule.property || 'payload');
                     propertyField.typedInput('type', rule.propertyType || 'msg');
                     topicField.typedInput('value', rule.topic);
-                    if (rule.t == "btwn") {
+                    if (rule.t == "btwn" || rule.t == "hysteresis") {
                         btwnValueField.typedInput('value', rule.v);
                         btwnValueField.typedInput('type', rule.vt || 'num');
                         btwnValue2Field.typedInput('value', rule.v2);
@@ -300,7 +303,7 @@
                 // format rule
                 var r = { t: type };
                 if (!(type === "true" || type === "false" || type === "null" || type === "nnull")) {
-                    if (type === "btwn") {
+                    if (type === "btwn" || type === "hysteresis") {
                         r.v = rule.find(".node-input-rule-btwn-value").typedInput('value');
                         r.vt = rule.find(".node-input-rule-btwn-value").typedInput('type');
                         r.v2 = rule.find(".node-input-rule-btwn-value2").typedInput('value');
