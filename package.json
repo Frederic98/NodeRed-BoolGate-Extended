@@ -1,8 +1,12 @@
 {
-    "name": "node-red-contrib-bool-gate",
-    "version": "1.0.2",
+    "name": "node-red-contrib-bool-gate-extended",
+    "version": "1.0.3",
     "description": "Node RED node to include boolean logic gates",
     "author": "Nicolas FRBEZAR <nicolas.frbezar@actemium.com>",
+    "contributors": [
+        "Nicolas FRBEZAR <nicolas.frbezar@actemium.com>",
+        "Frederic Meeuwissen"
+    ]
     "dependencies": {},
     "keywords": [
         "node-red",
