@@ -1,17 +1,19 @@
 
-# node-red-contrib-bool-gate [![Unlicense](https://img.shields.io/badge/un-license-green.svg?style=flat)](http://unlicense.org)
+# node-red-contrib-bool-gate-extended [![Unlicense](https://img.shields.io/badge/un-license-green.svg?style=flat)](http://unlicense.org)
 
-Node RED node to include boolean logic gates.
+Node RED node to include boolean logic gates.  
+Based on the work of Nicolas FRBEZAR, added some functionality.
+- Hysteresis
 
 ## Installation
 
 ```bash
-$ npm install node-red-contrib-bool-gate
+$ npm install Frederic98/NodeRed-BoolGate-Extended
 ```
 
 Restart Node-RED and use the node!
 
-Or from the Node-RED's palette, search for "node-red-contrib-bool-gate".
+~~Or from the Node-RED's palette, search for "node-red-contrib-bool-gate".~~
 
 Check example at "Import > Examples > boolean logic"
 
