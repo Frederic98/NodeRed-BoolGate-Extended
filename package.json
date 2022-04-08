@@ -6,7 +6,7 @@
     "contributors": [
         "Nicolas FRBEZAR <nicolas.frbezar@actemium.com>",
         "Frederic Meeuwissen"
-    ]
+    ],
     "dependencies": {},
     "keywords": [
         "node-red",
